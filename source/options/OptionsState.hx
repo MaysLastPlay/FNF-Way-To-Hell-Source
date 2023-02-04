@@ -29,39 +29,34 @@ using StringTools;
 
 class OptionsState extends MusicBeatState
 {
-	var options:Array<String> = ['Note Colors', 'Controls', 'Adjust Delay and Combo', 'Graphics', 'Visuals and UI', 'Gameplay'];
+	var options:Array<String> = ['Preferences', 'Appearance', 'Optimization', 'Visuals', 'Combo Offsets'];
 	private var grpOptions:FlxTypedGroup<Alphabet>;
 	private static var curSelected:Int = 0;
 	public static var menuBG:FlxSprite;
 
 	function openSelectedSubstate(label:String) {
 		switch(label) {
-			case 'Note Colors':
+			case 'Preferences':
 				#if android
 				removeVirtualPad();
 				#end
-				openSubState(new options.NotesSubState());
-			case 'Controls':
+				openSubState(new options.PreferencesSubState());
+			case 'Appearance':
 				#if android
 				removeVirtualPad();
 				#end
-				openSubState(new options.ControlsSubState());
-			case 'Graphics':
+				openSubState(new options.AppearanceSubState());
+			case 'Optimization':
 				#if android
 				removeVirtualPad();
 				#end
-				openSubState(new options.GraphicsSettingsSubState());
-			case 'Visuals and UI':
+				openSubState(new options.OptimizationSubState());
+			case 'Visuals':
 				#if android
 				removeVirtualPad();
 				#end
-				openSubState(new options.VisualsUISubState());
-			case 'Gameplay':
-				#if android
-				removeVirtualPad();
-				#end
-				openSubState(new options.GameplaySettingsSubState());
-			case 'Adjust Delay and Combo':
+				openSubState(new options.VisualsSubState());
+			case 'Combo Offsets':
 				LoadingState.loadAndSwitchState(new options.NoteOffsetState());
 		}
 	}

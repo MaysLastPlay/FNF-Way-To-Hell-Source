@@ -27,12 +27,12 @@ import Controls;
 
 using StringTools;
 
-class VisualsUISubState extends BaseOptionsMenu
+class AppearanceSubState extends BaseOptionsMenu
 {
 	public function new()
 	{
-		title = 'Visuals and UI';
-		rpcTitle = 'Visuals & UI Settings Menu'; //for Discord Rich Presence
+		title = 'Appearance';
+		rpcTitle = 'Appearance Menu'; //for Discord Rich Presence
 
 		var option:Option = new Option('Note Splashes',
 			"If unchecked, hitting \"Sick!\" notes won't show particles.",
@@ -52,22 +52,8 @@ class VisualsUISubState extends BaseOptionsMenu
 			"What should the Time Bar display?",
 			'timeBarType',
 			'string',
-			'Time Left',
-			['Time Left', 'Time Elapsed', 'Song Name', 'Disabled']);
-		addOption(option);
-
-		var option:Option = new Option('Flashing Lights',
-			"Uncheck this if you're sensitive to flashing lights!",
-			'flashing',
-			'bool',
-			true);
-		addOption(option);
-		
-		var option:Option = new Option('Watermark',
-			"If unchecked, Add Watermark",
-			'kadeEngineWatermark',
-			'bool',
-			true);
+			'Timebar Visible',
+			['Timebar Visible', 'Timebar Disabled']);
 		addOption(option);
 
 		var option:Option = new Option('Camera Zooms',
@@ -95,15 +81,7 @@ class VisualsUISubState extends BaseOptionsMenu
 		option.changeValue = 0.1;
 		option.decimals = 1;
 		addOption(option);
-		
-		var option:Option = new Option('FPS Counter',
-			'If unchecked, hides FPS Counter.',
-			'showFPS',
-			'bool',
-			#if android false #else true #end);
-		addOption(option);
-		option.onChange = onChangeFPSCounter;
-		
+
 		var option:Option = new Option('Pause Screen Song:',
 			"What song do you prefer for the Pause Screen?",
 			'pauseMusic',
@@ -131,11 +109,5 @@ class VisualsUISubState extends BaseOptionsMenu
 	{
 		if(changedMusic) FlxG.sound.playMusic(Paths.music('freakyMenu'));
 		super.destroy();
-	}
-
-	function onChangeFPSCounter()
-	{
-		if(Main.fpsVar != null)
-			Main.fpsVar.visible = ClientPrefs.showFPS;
 	}
 }

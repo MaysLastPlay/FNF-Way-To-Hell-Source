@@ -19,7 +19,7 @@ import openfl.display.BitmapData;
 import sys.FileSystem;
 import sys.io.File;
 #end
-import options.GraphicsSettingsSubState;
+import options.OptimizationSubState;
 //import flixel.graphics.FlxGraphic;
 import flixel.graphics.frames.FlxAtlasFrames;
 import flixel.group.FlxGroup;
@@ -230,7 +230,6 @@ class TitleState extends MusicBeatState
 			/*var diamond:FlxGraphic = FlxGraphic.fromClass(GraphicTransTileDiamond);
 			diamond.persist = true;
 			diamond.destroyOnNoUse = false;
-
 			FlxTransitionableState.defaultTransIn = new TransitionData(FADE, FlxColor.BLACK, 1, new FlxPoint(0, -1), {asset: diamond, width: 32, height: 32},
 				new FlxRect(-300, -300, FlxG.width * 1.8, FlxG.height * 1.8));
 			FlxTransitionableState.defaultTransOut = new TransitionData(FADE, FlxColor.BLACK, 0.7, new FlxPoint(0, 1),
@@ -587,7 +586,7 @@ class TitleState extends MusicBeatState
 				case 3:
 					#if PSYCH_WATERMARKS
 					addMoreText('MaysLastPlay', 15);
-					addMoreText('M.A. Jigsaw', 15);
+					addMoreText('Saw (M.A. Jigsaw)', 15);
 					addMoreText('VegethYT', 15);
 					#else
 					addMoreText('present');

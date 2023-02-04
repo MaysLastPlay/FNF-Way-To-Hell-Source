@@ -22,14 +22,11 @@ import flixel.addons.ui.FlxUI;
 
 
 /*
-
 THIS IS AN EDIT OF FlxUIDropDownMenu I'VE MADE BECAUSE I'M TIRED OF IT NOT SUPPORTING SCROLLING UP/DOWN
 BAH!
-
 The differences are the following:
 * Support to scrolling up/down with mouse wheel or arrow keys
 * THe default drop direction is "Down" instead of "Automatic"
-
 */
 
 

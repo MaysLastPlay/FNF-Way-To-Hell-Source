@@ -877,7 +877,7 @@ class PlayState extends MusicBeatState
 		if(ClientPrefs.downScroll) strumLine.y = FlxG.height - 150;
 		strumLine.scrollFactor.set();
 
-		var showTime:Bool = (ClientPrefs.timeBarType != 'Disabled');
+		var showTime:Bool = (ClientPrefs.timeBarType != 'Timebar Disabled');
 		timeTxt = new FlxText(STRUM_X + (FlxG.width / 2) - 248, 19, 400, "", 32);
 		timeTxt.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		timeTxt.scrollFactor.set();
@@ -886,9 +886,9 @@ class PlayState extends MusicBeatState
 		timeTxt.visible = showTime;
 		if(ClientPrefs.downScroll) timeTxt.y = FlxG.height - 44;
 
-		if(ClientPrefs.timeBarType == 'Song Name')
+		if(ClientPrefs.timeBarType == 'Timebar Visible')
 		{
-			timeTxt.text = SONG.song;
+			timeTxt.text = SONG.song + ' [' + CoolUtil.difficulties[storyDifficulty] + ']';
 		}
 		updateTime = showTime;
 
@@ -918,7 +918,7 @@ class PlayState extends MusicBeatState
 		add(strumLineNotes);
 		add(grpNoteSplashes);
 
-		if(ClientPrefs.timeBarType == 'Song Name')
+		if(ClientPrefs.timeBarType == 'Timebar Visible')
 		{
 			timeTxt.size = 24;
 			timeTxt.y += 3;
@@ -2449,7 +2449,7 @@ class PlayState extends MusicBeatState
 					var secondsTotal:Int = Math.floor(songCalc / 1000);
 					if(secondsTotal < 0) secondsTotal = 0;
 
-					if(ClientPrefs.timeBarType != 'Song Name')
+					if(ClientPrefs.timeBarType != 'Timebar Visible')
 						timeTxt.text = FlxStringUtil.formatTime(secondsTotal, false);
 				}
 			}

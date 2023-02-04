@@ -27,12 +27,12 @@ import Controls;
 
 using StringTools;
 
-class GameplaySettingsSubState extends BaseOptionsMenu
+class PreferencesSubState extends BaseOptionsMenu
 {
 	public function new()
 	{
-		title = 'Gameplay Settings';
-		rpcTitle = 'Gameplay Settings Menu'; //for Discord Rich Presence
+		title = 'Preferences';
+		rpcTitle = 'Preferences Menu'; //for Discord Rich Presence
 
 		var option:Option = new Option('Controller Mode',
 			'Check this if you want to play with\na controller instead of using your Keyboard.',
@@ -124,17 +124,6 @@ class GameplaySettingsSubState extends BaseOptionsMenu
 		option.scrollSpeed = 60;
 		option.minValue = 15;
 		option.maxValue = 135;
-		addOption(option);
-
-		var option:Option = new Option('Safe Frames',
-			'Changes how many frames you have for\nhitting a note earlier or late.',
-			'safeFrames',
-			'float',
-			10);
-		option.scrollSpeed = 5;
-		option.minValue = 2;
-		option.maxValue = 10;
-		option.changeValue = 0.1;
 		addOption(option);
 
 		super();
