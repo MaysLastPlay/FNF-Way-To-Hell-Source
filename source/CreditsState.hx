@@ -84,8 +84,8 @@ class CreditsState extends MusicBeatState
 		        ['Way To Hell Team'],
                         ['MaysLastPlay','MaysLastPlay','Director, Main Coder','https://youtube.com/channel/UCx0LxtFR8ROd9sFAq-UxDfw', 'F73838'],
                         ['Other Credits Soon','no','','https://youtube.com/channel/UCx0LxtFR8ROd9sFAq-UxDfw', 'F73838'],
-            ['Special Thanks']
-		        ['M.A. Jigsaw','saw','VideoWiev/AndroidTools Extension Creator','https://www.youtube.com/channel/UC2Sk7vtPzOvbVzdVTWrribQ', 'F73838'],
+            ['Special Thanks'],
+		        ['M.A. Jigsaw','saw','VideoWiev/AndroidTools Extension Creator','https://www.youtube.com/channel/UC2Sk7vtPzOvbVzdVTWrribQ', 'F73838']
 		];
 		
 		for(i in pisspoop){
