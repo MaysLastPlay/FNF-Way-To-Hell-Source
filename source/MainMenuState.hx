@@ -37,7 +37,7 @@ class MainMenuState extends MusicBeatState
 		'freeplay',
 		'credits',
 		'options',
-		'discord'
+		#if !switch 'donate' #end
 	];
 
 	var magenta:FlxSprite;
@@ -202,7 +202,7 @@ class MainMenuState extends MusicBeatState
 
 			if (controls.ACCEPT)
 			{
-				if (optionShit[curSelected] == 'discord')
+				if (optionShit[curSelected] == 'donate')
 				{
 					CoolUtil.browserLoad('https://discord.gg/GnAuBjbCZf');
 				}
