@@ -93,7 +93,7 @@ class MainMenuState extends MusicBeatState
 		magenta.color = 0xFFfd719b;
 		add(magenta);
 
-		var splash:FlxSprite = new FlxSprite(0,0).loadGraphic(Paths.image('menumod/Splash'));
+		var splash:FlxSprite = new FlxSprite(0,0).loadGraphic(Paths.image('Splash'));
 		splash.scrollFactor.set(0, 0);
 		splash.setGraphicSize(Std.int(splash.width * 1));
 		splash.antialiasing = ClientPrefs.globalAntialiasing;
