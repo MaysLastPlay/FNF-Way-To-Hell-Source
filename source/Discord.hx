@@ -52,7 +52,7 @@ class DiscordClient
 			details: "In the Menus",
 			state: null,
 			largeImageKey: 'icon',
-			largeImageText: "Play Engine"
+			largeImageText: "Friday Night Funkin': Way To Hell"
 		});
                 #end
 	}
