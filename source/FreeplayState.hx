@@ -115,7 +115,7 @@ class FreeplayState extends MusicBeatState
 			songText.isMenuItem = true;
 			songText.screenCenter(X);
 			songTextyAdd -= 70;
-			if(isSelectable) {
+			if(isSelectable)
 				songText.x -= 70;
 			songText.targetY = i;
 			grpSongs.add(songText);
