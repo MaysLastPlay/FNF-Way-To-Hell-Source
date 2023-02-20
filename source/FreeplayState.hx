@@ -113,6 +113,10 @@ class FreeplayState extends MusicBeatState
 		{
 			var songText:Alphabet = new Alphabet(0, (70 * i) + 30, songs[i].songName, true, false);
 			songText.isMenuItem = true;
+			songText.screenCenter(X);
+			songTextyAdd -= 70;
+			if(isSelectable) {
+				songText.x -= 70;
 			songText.targetY = i;
 			grpSongs.add(songText);
 
